@@ -26,11 +26,11 @@ void ofxMasterSlaveControl::draw() {
 	}
 }
 
-void ofxMasterSlaveControl::addMaster(ofxBaseGui *control) {
+void ofxMasterSlaveControl::addMaster(ofxGuiElement *control) {
 	masters.push_back(new MasterControl(control));
 }
 
-void ofxMasterSlaveControl::addSlave(ofxBaseGui *control) {
+void ofxMasterSlaveControl::addSlave(ofxGuiElement *control) {
 	slaves.push_back(new SlaveControl(control));
 }
 
