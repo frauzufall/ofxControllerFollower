@@ -10,8 +10,8 @@ void ofApp::setup(){
 	 * create panels
 	 */
 
-	ofxPanel* panel1 = gui.addPanel("control");
-	ofxPanel* panel2 = gui.addPanel();
+	ofxGuiPanel* panel1 = gui.addPanel("control");
+	ofxGuiPanel* panel2 = gui.addPanel();
 	panel2->setPosition(250, 10);
 
 
@@ -19,7 +19,7 @@ void ofApp::setup(){
 	 * add masters
 	 */
 
-	ofxBaseGui* control = panel1->add(m_slider1.set("sinus",0,-1,1));
+	ofxGuiElement* control = panel1->add(m_slider1.set("sinus",0,-1,1));
 	control->setFillColor(ofColor::tomato);
 	msc.addMaster(control);
 
