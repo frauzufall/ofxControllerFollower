@@ -2,7 +2,7 @@
 
 #include "ofMain.h"
 #include "ofxGuiExtended.h"
-#include "ofxMasterSlaveControl.h"
+#include "ofxControllerFollower.h"
 
 class ofApp : public ofBaseApp{
 
@@ -31,7 +31,7 @@ private:
 	ofParameter<float> s_slider1, s_slider2, s_slider3;
 	ofParameter<bool> s_toggle;
 
-	ofxMasterSlaveControl msc;
+	ofxControllerFollower cf;
 
 };
 

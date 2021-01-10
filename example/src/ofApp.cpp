@@ -16,29 +16,29 @@ void ofApp::setup(){
 
 
 	/*
-	 * add masters
+	 * add controllers
 	 */
 
 	ofxGuiElement* control = panel1->add(m_slider1.set("sinus",0,-1,1));
 	control->setFillColor(ofColor::tomato);
-	msc.addMaster(control);
+	cf.addController(control);
 
 	control = panel1->add(m_slider2.set("cosine",0,-1,1));
 	control->setFillColor(ofColor::aqua);
-	msc.addMaster(control);
+	cf.addController(control);
 
 	/*
-	 * add slaves
+	 * add followers
 	 */
 
-	control = panel2->add(s_slider1.set("slave1",0,0,1));
-	msc.addSlave(control);
+	control = panel2->add(s_slider1.set("follower1",0,0,1));
+	cf.addFollower(control);
 
-	control = panel2->add(s_slider2.set("slave2",0,10,20));
-	msc.addSlave(control);
+	control = panel2->add(s_slider2.set("follower2",0,10,20));
+	cf.addFollower(control);
 
-	control = panel2->add(s_toggle.set("slave3",false));
-	msc.addSlave(control);
+	control = panel2->add(s_toggle.set("follower3",false));
+	cf.addFollower(control);
 
 	/*
 	 * add regular slider
